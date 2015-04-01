@@ -1,0 +1,90 @@
+#container
+{
+	margin-top: 2%;
+	background-color: white;
+	content: fixed;
+	float: left;
+	padding: 10px;
+
+}
+
+body
+{
+	margin: 2% 10% ;
+
+	background-color:#99CCFF ;
+    background: url("14---111.png") left no-repeat fixed;
+	font-style : comic;
+}
+header{
+		
+		vertical-align: fixed;
+		background:white;
+		color : blue;
+		margin: 5px 0 ;
+		padding: 19px 50px;
+		border-radius: 5px;
+		font-family: Papyrus, fantasy; 
+		
+}
+	
+
+#head
+{
+	float: left;
+	
+}	
+.bod
+{
+	margin-top: 10%;
+	float : left;
+	background-color: white;
+	width: 80%;
+}
+
+#side
+{
+	background-color: black;
+	width: 10%;
+}
+.temp_button
+{	width: 125px;
+	
+	border:none;
+
+	margin-left:10%;
+	text-align: center;
+}
+.temp_button:hover
+{
+	background-color: #6CB5FF; 
+	font-style: bold; 
+	color: white;
+	border-radius: 3px;
+
+}
+#content
+{
+	margin-top: none;
+	padding : 2%;
+	width : 70%;
+	background-color: rgba(255, 255, 255,0.6);
+	font-family: Coronetscript, cursive;
+	border-radius: 5px; 
+	color:#262627;
+}
+
+.section_menu a
+{
+	text-decoration: none;
+	color: #262627;
+	font-family: Coronetscript, cursive;;
+
+}
+.section_menu a:hover
+{
+	text-decoration: none;
+	color:black;
+	font-family: Coronetscript, cursive;
+	font-style: bold;
+}
