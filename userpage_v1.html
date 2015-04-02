@@ -58,6 +58,7 @@
 			        <li><a href="#" onClick="$('#Watchlist_box').hide(1000); $('#Profile_box').hide(1000);$('#portfolio_box').show(1000)">Portfolio</a></li>
 			        <li><a href="#" onClick="$('#portfolio_box').hide(1000); $('#Profile_box').hide(1000); $('#Watchlist_box').show(1000)">Watchlist</a></li>
 			       	<li><a href="#" onClick="$('#Watchlist_box').hide(1000); $('#portfolio_box').hide(1000);$('#Profile_box').show(1000)">Profile</a></li>
+			       	<li><a href="user-final.html">Home</a></li>
 	  	
 			      </ul>
 
@@ -88,7 +89,7 @@
 			            </li>
 			            <li>
 			            	
-			            	<button type="button" class="btn btn-default btn-sm temp_button" data-toggle="modal" data-target="#myModal_log">
+			            	<button type="button" class="btn btn-default btn-sm temp_button">
 							 Logout
 							</button>
 
@@ -203,7 +204,7 @@
 							    <div class="modal-content">
 							      <div class="modal-header">
 							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							        <h4 class="modal-title" id="addstock">Add Stock to My Watchlist</h4>
+							        <h4 class="modal-title" id="addwatchstock">Add Stock to My Watchlist</h4>
 							      </div>
 							      <div class="modal-body">
 							        <form id="loginform" class="form-horizontal" role="form">
@@ -361,49 +362,88 @@
 			  </nav>
 </div>
 
+<div id="content">
 
-<div id="portfolio_box" >
+
+<div id="Profile_box" style="display:none;">
+			<div class="container">
+		<div class="col-lg-9">
+			<table class="table table-hover table-condensed">
+				<tr>
+					<td><b>First Name</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Last Name</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>E-mail</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Password</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Mobile Number</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Date of Birth</b></td>
+				<td></td>
+				</tr>	
+			</table>	
+		</div>	
+	</div>
+		</div>
+
+<div id="portfolio_box">
 	<div id = "txt">
-		Maintain a list of stocks you own,know your status in the market everyday.
-		<br><br>
 		<div class="container">
-		<a href="#" class="btn btn-info" data-toggle="modal" data-target="#addstock">Add Stock to Portfolio</a>
+			Maintain a list of stocks you own,know your status in the market everyday.
+			<br><br>
+			<div class="container">
+				<a href="#" class="btn btn-info" data-toggle="modal" data-target="#addstock">Add Stock to Portfolio</a>
+			</div>
+			<br><br>
+			<div class="col-lg-9">
+				<table class="table table-hover table-condensed">
+					<tr>
+						<td><b>Stock Name</b></td>
+						<td><b>Stock Ticker</b></td>
+						<td><b>Date of Purchase</b></td>
+						<td><b>Current Price</b></td>
+						<td></td>				
+					</tr>
+					<tr>
+						<td>Stock Name</td>
+						<td>Stock Ticker</td>
+						<td>Date</td>
+						<td>Price</td>	
+						<td><a href="" data-toggle="modal" data-target="#removestock">Remove</a></td>			
+					</tr>					
+					<tr>
+						<td>Stock Name</td>
+						<td>Stock Ticker</td>
+						<td>Date</td>
+						<td>Price</td>				
+						<td><a href="">Remove</a></td>
+					</tr>					
+				</table>		
+			</div>
 		</div>
-		<br><br>
-		<table class="table table-hover table-bordered table-condensed">
-			<tr>
-				<td><b>Stock Name</b></td>
-				<td><b>Stock Ticker</b></td>
-				<td><b>Date of Purchase</b></td>
-				<td><b>Current Price</b></td>
-				<td></td>				
-			</tr>
-			<tr>
-				<td>Stock Name</td>
-				<td>Stock Ticker</td>
-				<td>Date</td>
-				<td>Price</td>	
-				<td><a href="" data-toggle="modal" data-target="#removestock">Remove</a></td>			
-			</tr>					
-			<tr>
-				<td>Stock Name</td>
-				<td>Stock Ticker</td>
-				<td>Date</td>
-				<td>Price</td>				
-				<td><a href="">Remove</a></td>
-			</tr>					
-		</table>		
-		
 		</div>
-	</div>	
-</div>
+</div>	
+	
 
-<div id="Watchlist_box">
+<div id="Watchlist_box" style="display:none">
 	<div id = "txt">
 		Follow the stocks you wish to track and get notified if a notable prediction happens.<br><br>
 	<div class="container">
 		<a href="#" class="btn btn-info" data-toggle="modal" data-target="#addwatchstock">Add Stock to Watchlist</a>
 		<br><br>
+		<div class="col-lg-9">
 		<table class="table table-hover table-bordered table-condensed">
 			<tr>
 				<td><b>Stock Name</b></td>
@@ -421,43 +461,11 @@
 				<td><a href="" data-toggle="modal" data-target="#removewatchstock">Remove</a></td>
 			</tr>					
 			</div>
+			</div>
 	</div>	
 </div>
-		
-<div id="Profile_box">
-	<div id = "txt">
-	<div class="container">
-	<table class="table table-hover table-bordered table-condensed">
-	<tr>
-	<td><b>First Name</b></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td><b>Last Name</b></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td><b>E-mail</b></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td><b>Password</b></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td><b>Mobile Number</b></td>
-	<td></td>
-	</tr>
-	<tr>
-	<td><b>Date of Birth</b></td>
-	<td></td>
-	</tr>	
-	</table>	
-	</div>	
-	</div>	
 
 </div>
-
 
 
 </body>
