@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Stock Falcon</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="well">	
+		<div class="row" style = "text-align:center">
+			<h3><b>Welcome to</b></h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-lg-push-5">
+				<img src="StockFalconLogo-other.png" style="width:154px;height:147px">
+			</div>
+		</div>
+		<br>
+		<div class = "row" style="text-align:center">
+			<p>Your account has been successfully activated.</p>
+			<p><a href = "">You can access it here.</a></p>
+		</div>
+	</div>
+</body>
+
+</html>
