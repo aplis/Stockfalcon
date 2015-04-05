@@ -201,6 +201,124 @@ if(!class_exists ('Main'))
 
 
 		}
+		function editprofile($login_redirect)
+		{
+			 if ( !empty ( $_POST ) )
+
+
+				    {
+				       
+						$test = new data_base();
+						
+						$current = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+						$referrer = $_SERVER['HTTP_REFERER'];
+						$table = 'personal_info';
+					        $temp1 =  array('yash');
+					    
+					    
+					        $first_name = $_POST['first_name'];
+						$last_name = $_POST['last_name'];
+						$birthdate = $_POST['birthdate'];
+						$email = $_POST['email'];
+						$password = $_POST['password'];
+						$gender = $_POST['gender']; 
+					   
+					   
+					   		$timestamp = time();
+						    $nonce = sha1('registration-' . $first_name . $last_name . $timestamp .NONCE_SALT );
+						    $pass = $test->hash_password($password , $nonce); 
+						 	
+						 	$authmd5 = md5($birthdate.$last_name.$gender);
+						    $auth = sha1($authmd5.'auth'.AUTH_SALT.$timestamp.'authorisation'.$email.$last_name);
+
+						    $cookie = md5($last_name.$first_name.$first_name);
+
+						   
+
+
+
+						    $test->update( $table , $email, $gender , $timestamp ,$first_name , $last_name ,  $birthdate);
+
+						    $to = $email;
+						    $subject = "Account Verification";
+						    $mail = "click on the redirect link ".$referrer."?auth_key=".$auth."  to verify your account.";
+						    $mail_send = new mailsender();
+						
+
+				    }
+		}
+		function changepassword($login_redirect)
+       {
+
+			    if ( !empty ( $_POST ) )
+
+
+				    {
+				       
+						$test = new data_base();
+						
+						$current = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+						$referrer = $_SERVER['HTTP_REFERER'];
+
+					   	$table = 'personal_info';
+					        $temp1 =  array('yash');
+					    
+					   
+					         $o_password = $_POST['o_password'];
+						$n_password= $_POST['n_password'];
+						$temp_password = $_POST['temp_password'];
+						
+					     $test->changepassword($table , $o_password,$n_password,$temp_password);
+
+						   
+
+				    }
+
+
+		}
+		function polling($login_redirect)
+       {
+					
+			    if ( !empty ( $_POST ) )
+
+
+				   {
+				       
+						$test = new data_base();
+						
+						$current = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+						$referrer = $_SERVER['HTTP_REFERER'];
+
+					   	$table = 'prediction';
+					        $temp1 =  array('yash');
+					        $stock_name = $_POST['stock_name'];
+					         $test->polling( $table ,$stock_name);
+                        
+						   
+						}
+
+				    }
+				    function suggest($login_redirect)
+       {
+						
+			    if ( !empty ( $_POST ) )
+
+
+				   {
+				       
+						$test = new data_base();
+						
+						$current = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+						$referrer = $_SERVER['HTTP_REFERER'];
+
+					   	$table = 'prediction';
+					        $temp1 =  array('yash');
+					         $test->suggest( $table);
+                        
+						   
+						}
+
+				    }
 
    }
 
